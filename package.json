@@ -9,8 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^2.2.0",
     "clsx": "^2.1.1",
     "eslint-config-prettier": "^9.1.0",
+    "formik": "^2.4.6",
     "next": "^15.1.2",
     "prettier": "^3.4.2",
     "react": "^19.0.0",
