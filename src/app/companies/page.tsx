@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 
 import Header from '../components/header';
-import Toolbar from '../components/tollbar';
+import Toolbar from '../components/toolbar';
 import AddCompanyButtom from '../components/add-company-button';
 import SearchInput from '../components/search-input';
 import CompanyTable from '../components/company-table';
