@@ -1,6 +1,6 @@
 import AddCompanyButtom from './components/add-company-button';
 
-const Page = () => {
+const RootPage = () => {
   return (
     <main>
       <h1 className="text-xl">Hello, Next.js!</h1>
@@ -9,4 +9,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default RootPage;
