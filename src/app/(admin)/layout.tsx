@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import SideBar from '../components/sidebar';
+import Sidebar from '../components/sidebar';
 
 export interface ILayoutAdminProps {
   children: React.ReactNode;
@@ -8,7 +8,7 @@ export interface ILayoutAdminProps {
 const LayoutAdmin = ({ children }: ILayoutAdminProps) => {
   return (
     <Fragment>
-      <SideBar />
+      <Sidebar />
       <div className="ml-60">{children}</div>
     </Fragment>
   );
