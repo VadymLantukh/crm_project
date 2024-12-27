@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image';
 import StatusLabel, { Status } from './status-label';
 import clsx from 'clsx';
