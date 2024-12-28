@@ -1,8 +1,11 @@
+import { Fragment } from 'react';
+import Header from '@/app/components/header';
+
 const DashboardPage = () => {
   return (
-    <main>
-      <h1 className="text-xl">Dashboard page</h1>
-    </main>
+    <Fragment>
+      <Header>Dashboard</Header>
+    </Fragment>
   );
 };
 
