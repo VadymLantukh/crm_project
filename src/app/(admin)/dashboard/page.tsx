@@ -1,12 +1,7 @@
-import { Fragment } from 'react';
 import Header from '@/app/components/header';
 
 const DashboardPage = () => {
-  return (
-    <Fragment>
-      <Header>Dashboard</Header>
-    </Fragment>
-  );
+  return <Header>Dashboard</Header>;
 };
 
 export default DashboardPage;
