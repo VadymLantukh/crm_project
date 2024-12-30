@@ -1,8 +1,9 @@
 import StatCard, { StatCardType } from '@/app/components/stat-card';
-import { getSummaryStats } from '@/app/lib/api';
+import { getSummaryStats, ISummaryStats } from '@/app/lib/api';
+
 import Link from 'next/link';
 
-const labelByStat = {
+const labelByStat: Record<keyof ISummaryStats, string> = {
   promotions: 'Total promotions',
   categories: 'Total categories',
   newCompanies: 'New companies',
@@ -10,11 +11,11 @@ const labelByStat = {
 };
 
 const StatsPage = async () => {
-  const data = await getSummaryStats();
+const data = await getSummaryStats();
 
   return (
     <div className="grid grid-cols-12 gap-5">
-      {(Object.keys(labelByStat) as (keyof typeof data)[]).map((key) => (
+      {(Object.keys(labelByStat) as (keyof ISummaryStats)[]).map((key) => (
         <Link href={`/dashboard/${key}`} key={key} className="col-span-3">
           <StatCard
             type={StatCardType.Gradient}

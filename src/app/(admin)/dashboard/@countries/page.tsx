@@ -2,23 +2,26 @@ import clsx from 'clsx';
 import Image from 'next/image';
 
 import DashboardCard from '@/app/components/dashboard-card';
-import { getSummaryCountries } from '@/app/lib/api';
+import { getCompanies, getCountries } from '@/app/lib/api';
+import getCountById from '@/app/lib/utils/getCountById';
 
 const CountriesPage = async () => {
-  const data = await getSummaryCountries();
+  const countries = await getCountries();
+  const companies = await getCompanies();
+  const counts = getCountById(companies, 'countryId');
 
   return (
     <DashboardCard label="Countries of companies">
       <div className="flex items-end pb-5 px-5 gap-2">
         <div>
-          {data.map(({ countryId, countryTitle, count }) => (
+          {countries.map(({ id, title }) => (
             <p
-              key={countryId}
+              key={id}
               className={clsx(
                 'text-sm text-gray-900 font-medium',
                 'before:inline-block before:w-2 before:h-2 before:rounded-full before:align-middle before:mr-2 before:bg-purple-200',
               )}
-            >{`${countryTitle} - ${count}`}</p>
+            >{`${title} - ${counts[id] || 0}`}</p>
           ))}
         </div>
         <Image width={395} height={262} src="/images/world.svg" alt="world" />
