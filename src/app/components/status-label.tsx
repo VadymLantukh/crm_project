@@ -2,10 +2,12 @@
 
 import clsx from 'clsx';
 import { CompanyStatus } from '../lib/api';
+import { Fragment } from 'react';
 
 export interface IStatusLabelProps {
   status: CompanyStatus;
   disabled?: boolean;
+  styled?: boolean;
 }
 
 const labelByStatus = {
@@ -15,7 +17,14 @@ const labelByStatus = {
   [CompanyStatus.Suspended]: 'Suspended',
 };
 
-const StatusLabel = ({ status, disabled }: IStatusLabelProps) => {
+const StatusLabel = ({
+  status,
+  disabled,
+  styled = true,
+}: IStatusLabelProps) => {
+  const label = labelByStatus[status];
+  if (!styled) return <Fragment>label</Fragment>;
+
   return (
     <div
       className={clsx(
@@ -30,7 +39,7 @@ const StatusLabel = ({ status, disabled }: IStatusLabelProps) => {
       )}
     >
       <div className="w-1 h-1 mr-2 rounded-full bg-current" />
-      {labelByStatus[status]}
+      {label}
     </div>
   );
 };

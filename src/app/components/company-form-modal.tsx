@@ -4,13 +4,13 @@ import CompanyForm, { ICompanyFormProps } from './company-form';
 import Modal, { IModalProps } from './modal';
 
 export interface ICompanyFormModalProps extends IModalProps {
-  onSubmit: ICompanyFormProps['onSubmit'];
+  onSubmit?: ICompanyFormProps['onSubmit'];
 }
 
-const CompanyFormModal = ({ onSubmit, ...rest }: ICompanyFormModalProps) => {
+const CompanyFormModal = ({ onClose, ...rest }: ICompanyFormModalProps) => {
   return (
-    <Modal {...rest}>
-      <CompanyForm onSubmit={onSubmit} />
+    <Modal {...rest} onClose={onClose}>
+      <CompanyForm onSubmit={() => onClose()} />
     </Modal>
   );
 };

@@ -7,7 +7,9 @@ const AddCompanyButton = () => {
   const router = useRouter();
 
   return (
-    <Button onClick={() => router.push('/companies/new')}>Add company</Button>
+    <Button onClick={() => router.push('/companies/new', { scroll: false })}>
+      Add company
+    </Button>
   );
 };
 

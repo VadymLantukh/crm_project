@@ -2,17 +2,12 @@
 
 import { useRouter } from 'next/navigation';
 
-import CompanyForm from '@/app/components/company-form';
-import Modal from '@/app/components/modal';
+import CompanyFormModal from '@/app/components/company-form-modal';
 
 const ModalNewCompanyPage = () => {
   const router = useRouter();
 
-  return (
-    <Modal show={true} onClose={() => router.back()}>
-      <CompanyForm onSubmit={console.log} />
-    </Modal>
-  );
+  return <CompanyFormModal show={true} onClose={() => router.back()} />;
 };
 
 export default ModalNewCompanyPage;

@@ -12,7 +12,9 @@ const AddPromotionButton = ({ companyId }: IAddPromotionButtonProps) => {
 
   return (
     <Button
-      onClick={() => router.push(`/companies/${companyId}/new-promotion`)}
+      onClick={() =>
+        router.push(`/companies/${companyId}/new-promotion`, { scroll: false })
+      }
     >
       Add promotion
     </Button>
