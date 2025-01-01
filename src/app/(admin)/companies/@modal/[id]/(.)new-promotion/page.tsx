@@ -3,13 +3,13 @@
 import { useRouter } from 'next/navigation';
 import PromotionFormModal from '@/app/components/promotion-form-modal';
 
-export interface IModalNewPromotionPage {
+interface PageProps {
   params: {
     id: string;
   };
 }
 
-const ModalNewPromotionPage = ({ params }: IModalNewPromotionPage) => {
+const ModalNewPromotionPage = ({ params }: PageProps) => {
   const router = useRouter();
 
   return (
