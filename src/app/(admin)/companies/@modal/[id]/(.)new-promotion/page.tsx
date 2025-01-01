@@ -1,18 +1,14 @@
 'use client';
-
 import { useRouter } from 'next/navigation';
 import PromotionFormModal from '@/app/components/promotion-form-modal';
 
 type PageProps = {
-  params: {
-    id: string;
-  };
+  params: { id: string };
   searchParams?: { [key: string]: string | string[] | undefined };
 };
 
-const ModalNewPromotionPage = ({ params }: PageProps) => {
+const ModalNewPromotionPage: React.FC<PageProps> = ({ params }) => {
   const router = useRouter();
-
   return (
     <PromotionFormModal
       companyId={params.id}
@@ -21,5 +17,4 @@ const ModalNewPromotionPage = ({ params }: PageProps) => {
     />
   );
 };
-
 export default ModalNewPromotionPage;
