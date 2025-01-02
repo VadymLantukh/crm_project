@@ -11,7 +11,6 @@ export interface ISerachInputProps
 const SearchInput = ({ onSearchClick, ...rest }: ISerachInputProps) => {
   return (
     <div className="realtive w-96">
-      {' '}
       <input
         {...rest}
         type="text"

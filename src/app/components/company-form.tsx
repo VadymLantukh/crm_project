@@ -85,7 +85,7 @@ const CompanyForm = ({ onSubmit }: ICompanyFormProps) => {
               label="Status"
               placeholder="Status"
               name="status"
-              type="select"
+              as="select"
             >
               {(Object.values(CompanyStatus) as CompanyStatus[]).map(
                 (status) => (
@@ -97,7 +97,7 @@ const CompanyForm = ({ onSubmit }: ICompanyFormProps) => {
             </InputField>
             <InputField
               required
-              type="select"
+              as="select"
               label="Country"
               placeholder="Country"
               name="country"
@@ -116,7 +116,7 @@ const CompanyForm = ({ onSubmit }: ICompanyFormProps) => {
               label="Category"
               placeholder="Category"
               name="categoryId"
-              type="select"
+              as="select"
             >
               {categories?.map((category) => (
                 <option key={category.id} value={category.id}>
