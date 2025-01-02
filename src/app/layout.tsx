@@ -10,7 +10,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
       <head>
         <link rel="icon" href="/favicon.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>TrueScape</title>
+        <title>TruScape</title>
       </head>
       <body className={font.className}>
         <main>
