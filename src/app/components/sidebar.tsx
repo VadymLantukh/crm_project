@@ -16,9 +16,9 @@ const Sidebar = () => {
   return (
     <aside className="fixed top-0 left-0 z-40 w-60 h-screen">
       <div className="flex flex-col h-full overflow-y-auto bg-gray-900">
-        <Link href="/">
+        <Link className="mb-11" href="/">
           <Image
-            className="py-8 mb-11 mx-auto"
+            className="py-8 mx-auto"
             width={122}
             height={25}
             src="/icons/logo.svg"
