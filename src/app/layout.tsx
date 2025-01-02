@@ -7,8 +7,15 @@ const font = Plus_Jakarta_Sans({ subsets: ['latin'] });
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>TrueScape</title>
+      </head>
       <body className={font.className}>
-        <Providers>{children}</Providers>
+        <main>
+          <Providers>{children}</Providers>
+        </main>
       </body>
     </html>
   );
