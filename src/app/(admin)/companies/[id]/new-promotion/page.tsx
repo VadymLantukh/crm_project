@@ -1,5 +1,6 @@
 'use client';
 
+import { use } from 'react';
 import PromotionForm from '@/app/components/promotion-form';
 
 export interface INewPromotionPageProps {
@@ -8,10 +9,12 @@ export interface INewPromotionPageProps {
   };
 }
 
-const NewPromotionPage = ({ params }: INewPromotionPageProps) => {
+const NewPromotionPage = ({ params }: { params: Promise<{ id: string }> }) => {
+  const { id } = use(params);
+
   return (
     <div className="py-6 px-10">
-      <PromotionForm companyId={params.id} />
+      <PromotionForm companyId={id} />
     </div>
   );
 };
