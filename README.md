@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Project: TruScape
 
 ## Getting Started
 
@@ -27,10 +27,41 @@ To learn more about Next.js, take a look at the following resources:
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Functionality
+The client has the opportunity to add a company where he can enter information about his company, add a category and give it a status. After adding a company, the user can go to it and interact with promotions, add them, and view their status.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Technical part 🛠️
+The web application is made [Layout]([https://www.figma.com/design/fJF13s2UlxPIwTMcPVrSiz/TaskPro?node-id=0-1&node-type=canvas&t=c8xIKG0vKg6aodLs-0](https://www.figma.com/design/dPmdjAc0qKNMCKwWiC33QZ/CRM?t=kd8c8KMmqPyTerc3-0))
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Use skills:   
+<p align="left">
+<a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/typescript-colored.svg" width="36" height="36" alt="TypeScript" /></a><a href="https://code.visualstudio.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/visualstudiocode.svg" width="36" height="36" alt="VS Code" /></a><a href="https://nextjs.org/docs" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/nextjs-colored.svg" width="36" height="36" alt="NextJs" /></a><a href="https://www.figma.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/figma-colored.svg" width="36" height="36" alt="Figma" /></a><a href="https://tailwindcss.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/tailwindcss-colored.svg" width="36" height="36" alt="TailwindCSS" /></a>
+</p>
+
+### Project structure:
+```
+├── .next
+├── node_modules/
+├── public/
+├── src/app
+│   ├── (admin)/
+│   ├── components/
+│   ├── lib/
+│   ├── global-error.tsx
+│   ├── global.css
+│   ├── layout.tsx
+│   └── page.jsx
+├── .env.local
+├── .gitignore
+├── .prettierrc
+├── eslint.config.mjs
+├── next.env.d.ts
+├── next.config.ts
+├── package.json
+├── pnpm-lock.yaml
+├── postcss.config.mjs
+├── README.md
+├── tailwind.config.ts
+└── tsconfig.json
+```
